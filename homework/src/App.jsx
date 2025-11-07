@@ -5,8 +5,8 @@ import './App.css'
 
 function SearchForm({onChangeValue}) {
   return (
-    <form>
-      <input type="text" placeholder="Tìm theo tên người dùng..." onChange={(e) => {
+    <form className="toolbar">
+      <input className="search-input" type="text" placeholder="Tìm theo tên người dùng..." onChange={(e) => {
         onChangeValue(e.target.value)
       }} />
     </form>
@@ -71,7 +71,7 @@ function ResultTable({ keyword, user, onAdded }) {
   return(
     <>
       {editing && (
-        <div style={{border: '1px solid #ccc', padding: '12px', marginBottom: '16px'}}>
+        <div className="card" style={{border: '1px solid #e5e7eb', padding: '12px', borderRadius: '8px', textAlign:'left'}}>
           <h4>Sửa người dùng (ID {editing.id})</h4>
           <div>
             <label>Name: </label>
